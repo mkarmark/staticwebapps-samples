@@ -17,17 +17,6 @@ namespace StaticWebAppsEndToEndTesting.GetMessage
 {
     public static class GetMessage
     {
-        [FunctionName("GetMessage")]
-        public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
-            ExecutionContext context,
-            ILogger log)
-        {
-            log.LogInformation("C# HTTP trigger function processed a request! :) ");
-            string message = File.ReadAllText(context.FunctionAppDirectory + "/content.txt");
-            return new OkObjectResult(message);
-        }
-        
         [FunctionName("Function1")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
