@@ -23,7 +23,7 @@ namespace StaticWebAppsEndToEndTesting.GetMessage
              ILogger log)
         {
 
-            log.LogInformation("C# HTTP trigger function processed a request.");
+            log.LogInformation("!!!C# HTTP trigger function processed a request.");
 
             ManagedIdentityCredential myCredentials = new ManagedIdentityCredential();
 
